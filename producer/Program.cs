@@ -15,7 +15,7 @@ services.AddKafka(kafka =>
         .UseConsoleLog()
         .AddCluster(cluster =>
             cluster
-                .WithBrokers(new[] { "localhost:9092" })
+                .WithBrokers(["localhost:9092"])
                 .CreateTopicIfNotExists(topicName, 1, 1)
                 .CreateTopicIfNotExists(unstructuredTopicName, 1, 1)
                 .AddProducer(

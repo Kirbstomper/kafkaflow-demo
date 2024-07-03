@@ -9,7 +9,7 @@ builder.Services.AddKafka(kafka =>
         .UseConsoleLog()
         .AddCluster(cluster =>
             cluster
-                .WithBrokers(new[] { builder.Configuration["ConnectionStrings:Kafka"] })
+                .WithBrokers([builder.Configuration["ConnectionStrings:Kafka"]])
                 .CreateTopicIfNotExists("sample-topic")
                 .CreateTopicIfNotExists("custom-topic")
                 .AddConsumer(consumer =>

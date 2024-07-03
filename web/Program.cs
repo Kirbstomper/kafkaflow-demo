@@ -1,6 +1,5 @@
 using Domain;
 using KafkaFlow;
-using KafkaFlow.Producers;
 using KafkaFlow.Serializer;
 
 var builder = WebApplication.CreateBuilder(args);
